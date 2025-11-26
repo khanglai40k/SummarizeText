@@ -224,3 +224,4 @@ Nếu bạn cho biết bạn muốn làm extractive hay abstractive, tôi có th
 25/11 : Khang bắt đầu tìm hiểu về Vnexpress về sơ lược
 26/11: Việt Tìm hiểu về tóm tắt text
 26/11: Khang tìm hiểu được 2 cách tiếp cận là Extractive và Abstractive
+26/11 : Khang crawl data thành công
