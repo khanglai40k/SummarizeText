@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Web Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Chào mừng bạn đến Flask Web!</h1>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+
+        <!-- Text cần tóm tắt -->
+        <label>Hoặc dán text:</label>
+        <textarea name="contents" placeholder="Dán text cần tóm tắt vào đây" rows="12"></textarea>
+
+        <!-- Chọn tỷ lệ tóm tắt -->
+        <label>Tỷ lệ tóm tắt (%):</label>
+        <select name="scale">
+            <option value="20">20%</option>
+            <option value="30" selected>30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+        </select>
+
+        <!-- Input URL -->
+        <label>Hoặc nhập URL bài báo:</label>
+        <input type="text" name="url" placeholder="https://...">
+
+        <!-- Input file Word -->
+        <label>Hoặc tải file Word (.docx):</label>
+        <input type="file" name="file">
+
+        <button type="submit">TÓM TẮT</button>
+    </form>
+
+    <!-- Kết quả tóm tắt -->
+    <div class="result">
+        <h2>Kết quả tóm tắt:</h2>
+        {% if summary_result %}
+        <p>{{ summary_result }}</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
